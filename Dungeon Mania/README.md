@@ -61,15 +61,15 @@ In Dungeon Mania you control a Player and have to complete various goals within 
 
 The simplest form of such a puzzle is a maze, where the Player must find their way from the starting point to the exit.
 
-<img src='images/maze.png' />
+<img src='https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/maze.png' />
 
 More advanced puzzles may contain things like boulders that need to be pushed onto floor switches,
 
-<img src='images/boulders.png' />
+<img src='https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/boulders.png' />
 
 enemies that need to be fought with weapons, or collectables like potions and treasure.
 
-<img src='images/advanced.png' />
+<img src='https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/advanced.png' />
 
 ### 3.1 Player
 
@@ -81,13 +81,13 @@ The game contains the following static entities.
 
 | Entity    | Image | Description   |
 | --------- | ----- | -----------   |
-| Wall      | <img src="images/wall.png" /> | Blocks the movement of the Player, enemies and boulders.   |
-| Exit      | <img src="images/exit.png" /> | If the Player goes through it, the puzzle is complete. |
-| Boulder   | <img src="images/boulder.png" width="40" /> | Acts like a wall in most cases. The only difference is that it can be pushed by the Player into cardinally adjacent squares. The Player is only strong enough to push <b>one</b> boulder at a time. When the player pushes a boulder, they move into the spot the boulder was previously in. Boulders can be pushed onto collectable entities. |
-| Floor Switch |  <img src="images/pressure_plate.png" /> | Switches behave like empty squares, so other entities can appear on top of them. When a boulder is pushed onto a floor switch, it is triggered. Pushing a boulder off the floor switch untriggers. |
-| Door      | <img src="images/door.png" /> | Exists in conjunction with a single key that can open it. If the Player holds the key, they can open the door by moving through it. Once open, it remains open. |
-| Portal       | <img src="images/portal.png" /> | Teleports entities to a corresponding portal. The player must end up in a square cardinally adjacent to the corresponding portal. The square they teleport onto must also be within movement constraints - e.g. the player cannot teleport and end up on a wall. If all squares cardinally adjacent to the corresponding portal are walls, then the player should remain where they are. |
-| Zombie Toast Spawner | <img src="images/toaster.png" /> | Spawns zombie toasts in an open square cardinally adjacent to the spawner. The Player can destroy a zombie spawner if they have a weapon and are cardinally adjacent to the spawner. |
+| Wall      | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/wall.png" /> | Blocks the movement of the Player, enemies and boulders.   |
+| Exit      | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/exit.png" /> | If the Player goes through it, the puzzle is complete. |
+| Boulder   | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/boulder.png" width="40" /> | Acts like a wall in most cases. The only difference is that it can be pushed by the Player into cardinally adjacent squares. The Player is only strong enough to push <b>one</b> boulder at a time. When the player pushes a boulder, they move into the spot the boulder was previously in. Boulders can be pushed onto collectable entities. |
+| Floor Switch |  <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/pressure_plate.png" /> | Switches behave like empty squares, so other entities can appear on top of them. When a boulder is pushed onto a floor switch, it is triggered. Pushing a boulder off the floor switch untriggers. |
+| Door      | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/door.png" /> | Exists in conjunction with a single key that can open it. If the Player holds the key, they can open the door by moving through it. Once open, it remains open. |
+| Portal       | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/portal.png" /> | Teleports entities to a corresponding portal. The player must end up in a square cardinally adjacent to the corresponding portal. The square they teleport onto must also be within movement constraints - e.g. the player cannot teleport and end up on a wall. If all squares cardinally adjacent to the corresponding portal are walls, then the player should remain where they are. |
+| Zombie Toast Spawner | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/toaster.png" /> | Spawns zombie toasts in an open square cardinally adjacent to the spawner. The Player can destroy a zombie spawner if they have a weapon and are cardinally adjacent to the spawner. |
 
 ### 3.3 Moving Entities
 
@@ -97,22 +97,22 @@ All enemy entities can be created as part of the initial dungeon. Each tick, all
 
 | Entity    | Image | Description |
 | --------- | ----- | ----------- |
-Spider | <img src="images/spider.png" width="40" /> | Spiders spawn at random locations in the dungeon from the beginning of the game. When the spider spawns, they immediately move the 1 square upwards (towards the top of the screen) and then begin 'circling' their spawn spot (see a [visual example here](images/spider_movement_1.png)). Spiders are able to traverse through walls, doors, switches, portals, exits (which have no effect), but not boulders, in which case it will reverse direction (see a [visual example here](images/spider_movement_2.png)). When it comes to spawning spiders, since the map is technically infinite you can spawn them anywhere - however for better gameplay we suggest you make an assumption and pick a four co-ordinate box to spawn spiders in. |
-| Zombie Toast  | <img src="images/zombie.png" /> | Zombies spawn at zombie spawners and move in random directions. Zombies are limited by the same movement constraints as the Player, except portals have no effect on them. |
-| Mercenary | <img src="images/ranger.png" /> | Mercenaries do not spawn; they are only present if created as part of the dungeon. They constantly move towards the Player, stopping only if they cannot move any closer (they are able to move around walls). Mercenaries are limited by the same movement constraints as the Player. All mercenaries are considered hostile, unless the Player can bribe them with a certain amount of gold; in which case they become allies. Mercenaries must be within a certain radius of the player in order to be bribed, which is formed by the diagonally and cardinally adjacent cells in a "square" fashion, akin to the blast radius for bombs. As an ally, once it reaches the Player it simply follows the Player around, occupying the square the player was previously in. |
+Spider | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/spider.png" width="40" /> | Spiders spawn at random locations in the dungeon from the beginning of the game. When the spider spawns, they immediately move the 1 square upwards (towards the top of the screen) and then begin 'circling' their spawn spot (see a [visual example here](https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/spider_movement_1.png)). Spiders are able to traverse through walls, doors, switches, portals, exits (which have no effect), but not boulders, in which case it will reverse direction (see a [visual example here](https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/spider_movement_2.png)). When it comes to spawning spiders, since the map is technically infinite you can spawn them anywhere - however for better gameplay we suggest you make an assumption and pick a four co-ordinate box to spawn spiders in. |
+| Zombie Toast  | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/zombie.png" /> | Zombies spawn at zombie spawners and move in random directions. Zombies are limited by the same movement constraints as the Player, except portals have no effect on them. |
+| Mercenary | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/ranger.png" /> | Mercenaries do not spawn; they are only present if created as part of the dungeon. They constantly move towards the Player, stopping only if they cannot move any closer (they are able to move around walls). Mercenaries are limited by the same movement constraints as the Player. All mercenaries are considered hostile, unless the Player can bribe them with a certain amount of gold; in which case they become allies. Mercenaries must be within a certain radius of the player in order to be bribed, which is formed by the diagonally and cardinally adjacent cells in a "square" fashion, akin to the blast radius for bombs. As an ally, once it reaches the Player it simply follows the Player around, occupying the square the player was previously in. |
 
 ### 3.4 Collectable Entities
 
 | Entity    | Image | Description |
 | --------- | ----- | ----------- |
-| Treasure       | <img src="images/treasure.png" /> | Can be collected by the Player. | 
-| Key            | <img src="images/key.png" /> | Can be picked up by the player when they move into the square containing it. The Player can carry only one key at a time, and only one door has a lock that fits the key. Keys disappear once used in any context i.e. opening a door, building an item. If a key is used before opening its door, its corresponding door will be locked forever. | 
-| Invincibility Potion | <img src="images/purple_potion.png" /> | When a Player picks up an Invincibility potion, they may consume it at any time. Any battles that occur when the Player has the effects of the potion end immediately after the first round, with the Player immediately winning. Because of this, Mercenaries and Zombies will run away from the Player when they are invincible. Movement of spiders and bribed mercenaries remains unaffected. The effects of the potion only last for a limited time.         |
-| Invisibility Potion | <img src="images/green_potion.png" width="40" />| When a player picks up an invisibility potion, they may consume it at any time and they immediately become invisible and can move past all other entities undetected. Battles do not occur when a player is under the influence of an invisibility potion. Since mercenaries typically follow the player, their movement becomes the same as a Zombie when the player is invisible. |
-| Wood       | <img src="images/wood_big.png" width="40" /> | Can be collected by the player.  |
-| Arrows     | <img src="images/arrow.png" width="40" /> | Can be picked up by the player.  |
-| Bomb       | <img src="images/bomb.png" width="40" /> | Can be collected by the player. When removed from the inventory it is placed on the map at the player's location. When a bomb is cardinally adjacent to an active switch, it destroys all entities in diagonally and cardinally adjacent cells, except for the player, forming a "square" blast radius. The bomb should detonate when it is placed next to an already active switch, or placed next to an inactive switch that then becomes active. The bomb explodes on the same tick it becomes cardinally adjacent to an active switch. A bomb cannot be picked up once it has been used. |
-| Sword  | <img src="images/sword.png" width="40" /> | A standard melee weapon. Swords can be collected by the Player and used in battles, increasing the amount of damage they deal by an additive factor. Each sword has a specific durability that dictates the number of battles it can be used before it deteriorates and is no longer usable.  |
+| Treasure       | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/treasure.png" /> | Can be collected by the Player. | 
+| Key            | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/key.png" /> | Can be picked up by the player when they move into the square containing it. The Player can carry only one key at a time, and only one door has a lock that fits the key. Keys disappear once used in any context i.e. opening a door, building an item. If a key is used before opening its door, its corresponding door will be locked forever. | 
+| Invincibility Potion | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/purple_potion.png" /> | When a Player picks up an Invincibility potion, they may consume it at any time. Any battles that occur when the Player has the effects of the potion end immediately after the first round, with the Player immediately winning. Because of this, Mercenaries and Zombies will run away from the Player when they are invincible. Movement of spiders and bribed mercenaries remains unaffected. The effects of the potion only last for a limited time.         |
+| Invisibility Potion | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/green_potion.png" width="40" />| When a player picks up an invisibility potion, they may consume it at any time and they immediately become invisible and can move past all other entities undetected. Battles do not occur when a player is under the influence of an invisibility potion. Since mercenaries typically follow the player, their movement becomes the same as a Zombie when the player is invisible. |
+| Wood       | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/wood_big.png" width="40" /> | Can be collected by the player.  |
+| Arrows     | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/arrow.png" width="40" /> | Can be picked up by the player.  |
+| Bomb       | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/bomb.png" width="40" /> | Can be collected by the player. When removed from the inventory it is placed on the map at the player's location. When a bomb is cardinally adjacent to an active switch, it destroys all entities in diagonally and cardinally adjacent cells, except for the player, forming a "square" blast radius. The bomb should detonate when it is placed next to an already active switch, or placed next to an inactive switch that then becomes active. The bomb explodes on the same tick it becomes cardinally adjacent to an active switch. A bomb cannot be picked up once it has been used. |
+| Sword  | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/sword.png" width="40" /> | A standard melee weapon. Swords can be collected by the Player and used in battles, increasing the amount of damage they deal by an additive factor. Each sword has a specific durability that dictates the number of battles it can be used before it deteriorates and is no longer usable.  |
 
 It is possible for a player to use another potion while the effects of an existing potion are still lasting (can be of the same or a different type of potion). In this case, the effects are not registered immediately but are instead 'queued' and will take place the tick following the previous potion wearing of. For example, on tick 0 the Player consumes an invinsibility potion that lasts for 5 ticks and becomes invisible to enemies moving that tick, on tick 3 they use an invincibility potion, at the end of tick 4 (after all enemy movements) the player becomes visible again and becomes invincible.
 
@@ -122,8 +122,8 @@ Some entities can be built using a 'recipe' by the player, where entities are co
 
 | Entity    | Image         | Description       |
 | --------- | --------------| ------------------|
-| Bow  | <img src="images/bow.png" width="40" />| Can be crafted with 1 wood + 3 arrows. The bow has a durability which deteriorates after a certain number of battles. Bows give the Player double damage in a single round, to simulate being able to attack an enemy at range (it can't actually attack an enemy at range). |
-| Shield    | <img src="images/shield.png" /> | Can be crafted with 2 wood + (1 treasure OR 1 key). Shields decrease the effect of enemy attacks. Each shield has a specific durability that dictates the number of battles it can be used before it deteriorates. |
+| Bow  | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/bow.png" width="40" />| Can be crafted with 1 wood + 3 arrows. The bow has a durability which deteriorates after a certain number of battles. Bows give the Player double damage in a single round, to simulate being able to attack an enemy at range (it can't actually attack an enemy at range). |
+| Shield    | <img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/shield.png" /> | Can be crafted with 2 wood + (1 treasure OR 1 key). Shields decrease the effect of enemy attacks. Each shield has a specific durability that dictates the number of battles it can be used before it deteriorates. |
 
 ### 3.6 Battles
 
@@ -762,7 +762,7 @@ Based on your initial detailed design you will need to map out as a team the wor
 
 3. Map out all of the dependencies between tasks visually. How you choose to do this is up to you and there is no strict format. Here is an example of the visualisation from a different project:
 
-<img src="images/planning.png" />
+<img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-ii/images/planning.png" />
 
 You may also wish to allocate due dates for each task and assign team members, though this will not be assessed.
 
