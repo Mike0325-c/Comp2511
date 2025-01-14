@@ -1,0 +1,25 @@
+{
+    "entities": [
+        {
+            "type" : "swamp_tile",
+            "x" : 6,
+            "y" : 6
+        },
+        {
+            "type" : "wall",
+            "x" : 1,
+            "y" : 0
+        },
+        {
+            "type" : "player",
+            "x" : 5,
+            "y" : 5
+        }, 
+        {
+            "type": "exit",
+            "x": 5,
+            "y": 1
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

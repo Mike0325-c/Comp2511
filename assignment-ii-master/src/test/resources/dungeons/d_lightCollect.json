@@ -1,0 +1,18 @@
+{
+    "entities": [
+        {
+            "type": "player",
+            "x": 1,
+            "y": 0
+        },
+        {
+            "type": "light_bulb_off",
+            "x": 0,
+            "y": 0,
+            "logic": "or"
+        }
+    ],
+    "goal-condition": {
+        "goal": "exit"
+    }
+}
