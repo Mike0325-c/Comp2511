@@ -51,7 +51,7 @@ In this system, the satellite can talk to Device A and Device A can talk to the 
 
 Devices are static and will not move, but satellites can! Satellites move based on a constant linear velocity, in this case Standard Satellites have a linear velocity of 2,500 km per minute (or 2,500,000 metres). From this, we can calculate its angular velocity based on its height (which is the radius from the center of Jupiter). For example, after 10 minutes it would have moved a total of `2,500 / 80,000 * 10 mins = 0.03125 * 10 = 0.3125 radians ~= 18 degrees` (note that we don't have to account for the fact they are measured in `km` here since the extra `10^3` component will cancel out). This means our new position is `128 - 18` which is approximately `110-111 degrees`.
 
-<img alt="A simple example" src="imgs/simpleExample2.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample2.png"  width="50%" height="50%">
 
 Eventually after moving for a couple more minutes it will get out of range of the devices A and B.
 
@@ -59,19 +59,19 @@ Secondly, we need to look at interaction between satellites and devices. They ca
 
 To begin let's create a new file on a device. Clicking on Device A and pressing Create File as shown below we can create a file.
 
-<img alt="A simple example" src="imgs/simpleExample3.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample3.png"  width="50%" height="50%">
 
 Once created, files cannot be modified/deleted, furthermore every filename has to be unique. Creating a file called `Hello World!` with its contents also being `Hello World!` we can view it by going to the device again and clicking Open File as shown below.
 
-<img alt="A simple example" src="imgs/simpleExample4.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample4.png"  width="50%" height="50%">
 
 We can then send this file to our satellite by just clicking on the device ensuring the file and satellite are selected as below then clicking `Send File`.
 
-<img alt="A simple example" src="imgs/simpleExample5.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample5.png"  width="50%" height="50%">
 
 If we then try to open the file on the satellite we notice that it is empty and says 0/12 for its size. This is because files transfers aren't instant, they are based on the bandwidth of the satellite. Standard Satellites are relatively slow, so they will take 12 minutes to send this file since they only send at 1 byte per minute. If we let it run for at least 12 minutes and look again we will see the file has finished sending.
 
-<img alt="A simple example" src="imgs/simpleExample6.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample6.png"  width="50%" height="50%">
 
 We could then continue this by running the simulation a little longer and letting the satellite orbit around to Device C and then sending the file down to Device C.
 
@@ -178,7 +178,7 @@ Default direction for all satellites is negative (clockwise), unless otherwise s
     - Relay satellites don't allow you to ignore satellite requirements (other than visibility/range), for example you can't send a file from a Desktop Device to a Standard Satellite due to the fact that a Standard Satellite doesn't support Desktops. This should hold _even if_ a Relay is used along the way.
   - HINT: because there are no bandwidth limits and you don't have to show any tracking of files that go through the relay. Keep it simple! Don't over-engineer a solution for this one. You'll notice that the frontend when drawing connections that utilise relays don't go through the relay as shown below.
 
-<img alt="A simple example" src="imgs/simpleExample7.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample7.png"  width="50%" height="50%">
 
 | :information_source:  To save you some googling `v = r * ω` (where `v` is linear velocity i.e. metres per minute, `ω` is angular velocity i.e. radians per minute, and `r` is the radius / height of the satellite). |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -621,7 +621,7 @@ In the diagram below, two slopes have been created - one which goes from `θ = 0
 
 The second slope intersects the Jupiter at around `θ = 46.9`.
 
-<img src="imgs/slopes1.png" width="400" />
+<img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/slopes1.png" width="400" />
 
 When a Moving Device encounters an area of the earth which contains a slope, it remains on the new "surface" of Jupiter, i.e. moves up and down the slopes. Its height changes relative to the centre of the earth as well as its position according to the formula `Δh = μ * Δθ`. 
 
@@ -631,7 +631,7 @@ If, like in the above diagram, a downward slope extends past the base radius of 
 
 If a moving device finds itself to be at a sudden drop, where the slope finishes but the height is above ground level, then the device simply is transported back to ground level. We will not test the scenario where, at the end of a tick, the device is on the edge of a slope not at ground level (thereby being at two possible locations due to the infinite gradient of the "cliff").
 
-<img src="imgs/slopes2.png" height="400" />
+<img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/slopes2.png" height="400" />
 
 To implement slopes and moving devices, you will need to complete the following methods in the `BlackoutController`:
 
@@ -654,7 +654,7 @@ It is possible for slopes to be created at overlapping positions. If a slope `A`
 
 The below diagram illustrates the first of these scenarios.
 
-<img src="imgs/slopes3.png" height="400" />
+<img src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/slopes3.png" height="400" />
 
 There will only be one test that contains overlapping slopes, so consider it an extension activity worth very few marks.
 
