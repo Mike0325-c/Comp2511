@@ -45,7 +45,7 @@ There is an [introduction video available](https://thebox.unsw.edu.au/3CF51850-1
 
 Let’s assume initially there is a `Standard Satellite` at height approximately 80,000 km above the centre of Jupiter and at θ = 128 degrees. In addition there are 3 devices; Device A, Device B, and Device C. Device A and Device C are handheld devices, whereas Device B is a desktop device.
 
-<img alt="A simple example" src="imgs/simpleExample.png"  width="50%" height="50%">
+<img alt="A simple example" src="https://github.com/photkosee/COMP2511-22T3/blob/main/assignment-i/imgs/simpleExample.png"  width="50%" height="50%">
 
 In this system, the satellite can talk to Device A and Device A can talk to the satellite (communication is done by sending files) since they are in range of each other. Satellite A however cannot talk to Device B (and Device B cannot talk to Satellite A) because `Standard Satellite`s have restrictions on what devices they can talk to (discussed in more detail later). Finally, Satellite A cannot connect to Device C because it is not in visible sight range. The red line in the image highlights this.
 
